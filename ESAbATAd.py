@@ -8,7 +8,7 @@ def complement(bits): return [
     for b in bits
 ]
 
-class QuantumArray():
+class Barray():
     def __init__(self, B):
         self.bits = ['_'] * B
         self.unkowns = list(range(B))
@@ -61,7 +61,7 @@ class QuantumArray():
 t, B = map(int, input().split())
 print('B:', B, file=sys.stderr)
 for _ in range(t):
-    array = QuantumArray(B)
+    array = Barray(B)
     print('guess:', ''.join(array.bits), file=sys.stderr)
     print(''.join(array.bits), flush=True)
     if input() == 'N': sys.exit()
